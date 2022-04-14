@@ -109,12 +109,14 @@ let result = numbers.reduce(0, +)
 // A False
 
 // 9
-struct TaylorFan {
-    static var favoriteSong = "Shake it Off"
-    var name: String
+func result(_ string: String = "2") -> String {
+    "I bought \(string) apples"
+}
+func result(_ int: Int = 6) -> String {
+    "I bought \(int) apples"
 }
 
-let jamesSong = TaylorFan(name: "James").favoriteSong
+let numberOfApples: String = result()
 
-// Q is jamesSong favorite song "Shake it Off"?
+// Q is number of apples = 6?
 // A Won't Compile

@@ -5,5 +5,6 @@
         <page name='fersquestions'/>
         <page name='jorgesquestions'/>
         <page name='newfeatures'/>
+        <page name='uikitpreview'/>
     </pages>
 </playground>
