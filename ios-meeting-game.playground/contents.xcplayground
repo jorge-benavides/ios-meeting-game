@@ -4,5 +4,6 @@
         <page name='intro'/>
         <page name='fersquestions'/>
         <page name='jorgesquestions'/>
+        <page name='newfeatures'/>
     </pages>
 </playground>
