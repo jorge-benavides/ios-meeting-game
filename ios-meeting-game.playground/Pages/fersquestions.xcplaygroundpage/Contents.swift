@@ -1,4 +1,4 @@
-
+import UIKit
 // Game title:
 // Will it compile?
 
@@ -32,3 +32,44 @@ let closure = { [thing] in
 thing = "airplanes"
 
 closure()
+
+
+// 4
+
+func fetchCrewMember() -> (job: String, name: String) {
+    return ("Public Relations", "Jayne")
+}
+
+ let result = fetchCrewMember().0
+// Q: The output of result will be "Public Relations Jayne?
+// A: False
+
+// 5
+let names: [String?] = ["Barbara", nil, "Janet", nil, "Peter", nil, "George"]
+
+if let firstName = names.first {
+    print(firstName as Any)
+}
+
+// Q: The output of firstName will be: "Barbara"
+// A: False
+
+// 6
+let peopleNames: [String?] = ["Barbara", nil, "Janet", nil, "Peter", nil, "George"]
+let results = peopleNames.compactMap { $0 }
+
+// Q: The output of results will be 4
+// A: False
+
+
+// 7
+let data: [Any?] = ["Bill", nil, 69, "Ted"]
+
+for case let .some(datum) in data where datum is String {
+    print(datum)
+}
+
+// Q: The output of this code will be:
+// Bill
+// Ted
+// A: True

@@ -116,7 +116,7 @@ func result(_ int: Int = 6) -> String {
     "I bought \(int) apples"
 }
 
-let numberOfApples: String = result()
+// let numberOfApples: String = result()
 
 // Q is number of apples = 6?
 // A Won't Compile
