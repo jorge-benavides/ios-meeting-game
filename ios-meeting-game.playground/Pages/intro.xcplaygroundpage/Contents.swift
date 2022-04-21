@@ -120,3 +120,43 @@ func result(_ int: Int = 6) -> String {
 
 // Q is number of apples = 6?
 // A Won't Compile
+
+// 10
+
+func fetchCrewMember() -> (job: String, name: String) {
+    return ("Public Relations", "Jayne")
+}
+
+ let crewMember = fetchCrewMember().0
+// Q: The output of result will be "Public Relations Jayne?
+// A: False
+
+// 11
+let names: [String?] = ["Barbara", nil, "Janet", nil, "Peter", nil, "George"]
+
+if let firstName = names.first {
+    print(firstName as Any)
+}
+
+// Q: The output of firstName will be: "Barbara"
+// A: False
+
+
+// 12
+let peopleNames: [String?] = ["Barbara", nil, "Janet", nil, "Peter", nil, "George"]
+let results = peopleNames.compactMap { $0 }
+print(results)
+// Q: The output of results will be 4
+// A: False
+
+// 13
+let data: [Any?] = ["Bill", nil, 69, "Ted"]
+
+for case let .some(datum) in data where datum is String {
+    print(datum)
+}
+
+// Q: The output of this code will be:
+// Bill
+// Ted
+// A: True
