@@ -50,19 +50,21 @@ var hashmap: [String: _] = ["zero": 0]
 hashmap["one"] = nil
 
 
-// Inverted availability keyworkd
+// Inverted availability keyword
 // You can now write inverted availability conditions using the new #unavailable keyword. For example:
 
 if #available(iOS 15.0, *) {
-    let formattedString = Date().formatted()
+    let formattedString = Date().formatted(date: .numeric, time: .omitted)
+    print(formattedString)
 }
 
 if #unavailable(iOS 15.0) {
     // Old implementation
     let dateFormatter = DateFormatter()
     dateFormatter.locale = .current
-    dateFormatter.dateFormat = "yyyy"
+    dateFormatter.dateFormat = "m/d/yyyy"
     let formattedString = dateFormatter.string(from: Date())
+    print(formattedString)
 }
 
 //: [Next](@next)
