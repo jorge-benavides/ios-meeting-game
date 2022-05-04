@@ -3,6 +3,7 @@
     <pages>
         <page name='intro'/>
         <page name='uikitpreview'/>
+        <page name='swiftuipreview'/>
         <page name='newfeatures'/>
         <page name='bethecompiler'/>
     </pages>

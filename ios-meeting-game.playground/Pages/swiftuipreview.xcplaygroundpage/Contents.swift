@@ -3,15 +3,16 @@
 import SwiftUI
 import PlaygroundSupport
 
-// uikit playground preview
+// swiftui playground preview
 
-struct view: View {
+struct CustomView: View {
     var body: some View {
         Text("hello world")
             .padding(40)
     }
 }
 
-PlaygroundPage.current.setLiveView(view())
+let view = CustomView()
+PlaygroundPage.current.setLiveView(view)
 
 //: [Next](@next)
