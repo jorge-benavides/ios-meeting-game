@@ -15,26 +15,16 @@ protocol P {
     var greetings: String { get }
 }
 
+
 // generic syntax
-func generic<T: P>(value: T) -> T {
+func generic<T>(value: T) where T: P {
     print(value.greetings)
-    return value
 }
 
 // existential syntax
-func existential(value: any P) -> any P {
+func existential(value: any P) {
     print(value.greetings)
-    return value
 }
-
-struct S: P {
-    let greetings: String = "hello world!"
-}
-
-var s = S()
-
-s = generic(value: s)
-s = existential(value: s) as! S
 
 // ### Type placeholders
 // You can now include type placeholders in type expressions and annotations.
@@ -45,11 +35,6 @@ s = existential(value: s) as! S
 var dict: [_: String] = [0: "zero", 1: "one", 2: "two"]
 dict[3] = "three"
 
-/// Infered values are optional by default. In this case `Int?`.
-var hashmap: [String: _] = ["zero": 0]
-hashmap["one"] = nil
-
-
 // Inverted availability keyword
 // You can now write inverted availability conditions using the new #unavailable keyword. For example:
 
@@ -58,11 +43,11 @@ if #available(iOS 15.0, *) {
     print(formattedString)
 }
 
-if #unavailable(iOS 15.0) {
+if #unavailable(iOS 16.0) {
     // Old implementation
     let dateFormatter = DateFormatter()
     dateFormatter.locale = .current
-    dateFormatter.dateFormat = "m/d/yyyy"
+    dateFormatter.dateFormat = "M/d/yyyy"
     let formattedString = dateFormatter.string(from: Date())
     print(formattedString)
 }

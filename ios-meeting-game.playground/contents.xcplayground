@@ -2,9 +2,8 @@
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='intro'/>
-        <page name='fersquestions'/>
-        <page name='jorgesquestions'/>
-        <page name='newfeatures'/>
         <page name='uikitpreview'/>
+        <page name='newfeatures'/>
+        <page name='bethecompiler'/>
     </pages>
 </playground>
