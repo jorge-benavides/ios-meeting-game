@@ -16,7 +16,7 @@ Friendly reminder to finish Annual Security Training
     - For more information: https://smallappdeveloperassistance.com/
 
 ### Xcode
-- Swift now allows existential types written with the any keyword.
+- Swift now allows existential types written with the `any` keyword.
 - Placeholders in type expressions and annotations
 - Improved the accuracy of leak scanning in Instruments, Xcode’s memory graph debugger, and the leaks command line
 

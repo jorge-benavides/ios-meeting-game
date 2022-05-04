@@ -5,12 +5,12 @@ import PlaygroundSupport
 
 // uikit playground preview
 
-let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+let view = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
 
-view.backgroundColor = .lightGray
-view.layer.borderWidth = 3
-view.layer.borderColor = UIColor.red.withAlphaComponent(0.3).cgColor
+view.text = "hello world"
+view.textAlignment = .center
+view.backgroundColor = .white
 
-PlaygroundPage.current.liveView = view
+PlaygroundPage.current.setLiveView(view)
 
 //: [Next](@next)
